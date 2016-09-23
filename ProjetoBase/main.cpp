@@ -31,7 +31,7 @@ glClear(GL_COLOR_BUFFER_BIT); //LIMPA A TELA A CADA REDESENHO
     if (seletor == 6){
         glBegin(GL_TRIANGLES);
             glVertex2f(-0.5, -0.5);
-            glVertex2f(0, 0);
+            glVertex2f(0, 0.5);
             glVertex2f(0.5, -0.5);
         glEnd();
     }else
@@ -79,6 +79,7 @@ void createMenu(void){
         glutAddMenuEntry("TRIANGULO", 6); // OK
         glutAddMenuEntry("RETANGULO", 7); // OK
         glutAddMenuEntry("LOZANGO", 8); // OK
+
 
         submenu2 = glutCreateMenu(menu);
         glutAddMenuEntry("CIRCULO", 10); // AINDA NAO IMPLEMENTADO
