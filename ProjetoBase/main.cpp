@@ -38,10 +38,10 @@ glClear(GL_COLOR_BUFFER_BIT); //LIMPA A TELA A CADA REDESENHO
     // RETANGULO
     if (seletor == 7){
         glBegin(GL_QUADS);
-            glVertex2f(-1, -0.5);
-            glVertex2f(-1, 0.5);
-            glVertex2f(1, 0.5);
-            glVertex2f(1, -0.5);
+            glVertex2f(-0.8, -0.5);
+            glVertex2f(-0.8, 0.5);
+            glVertex2f(0.8, 0.5);
+            glVertex2f(0.8, -0.5);
         glEnd();
     }else
     //LOZANGO
@@ -52,9 +52,31 @@ glClear(GL_COLOR_BUFFER_BIT); //LIMPA A TELA A CADA REDESENHO
             glVertex2f(1, 0);
             glVertex2f(0, -0.5);
         glEnd();
+    }else
+    //PENTAGONO
+    if (seletor == 9){
+        glBegin(GL_POLYGON);
+            glVertex2f(-0.5, 0.1);
+            glVertex2f(0, 0.5);
+            glVertex2f(0.5, 0.1);
+            glVertex2f(0.3, -0.5);
+            glVertex2f(-0.3, -0.5);
+        glEnd();
     }
-    // CIRCULO
     if (seletor == 10){
+        glBegin(GL_POLYGON);
+            glVertex2f(-0.5,0);
+            glVertex2f(-0.3, 0.5);
+            glVertex2f(0.3, 0.5);
+            glVertex2f(0.5, 0);
+            glVertex2f(0.3, -0.5);
+            glVertex2f(-0.3, -0.5);
+        glEnd();
+    }
+    //COMPOSTA
+
+    // CIRCULO
+    if (seletor == 20){
                                                                 //FALTA O CIRCULO
     }
 
@@ -79,10 +101,13 @@ void createMenu(void){
         glutAddMenuEntry("TRIANGULO", 6); // OK
         glutAddMenuEntry("RETANGULO", 7); // OK
         glutAddMenuEntry("LOZANGO", 8); // OK
+        glutAddMenuEntry("PENTAGONO", 9); // OK
+        glutAddMenuEntry("HEXAGONO", 10); // OK
+
 
 
         submenu2 = glutCreateMenu(menu);
-        glutAddMenuEntry("CIRCULO", 10); // AINDA NAO IMPLEMENTADO
+        glutAddMenuEntry("CIRCULO", 20); // AINDA NAO IMPLEMENTADO
 
         retornomenu = glutCreateMenu(menu); //POR SER UMA FUNÇÃO VOID, ESSE VALOR IRÁ INFORMAR O QUE FOI SELECIONADO NO MENU
 
