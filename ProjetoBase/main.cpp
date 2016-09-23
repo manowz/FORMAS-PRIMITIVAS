@@ -9,7 +9,7 @@ int retornomenu, submenu1, submenu2;
 
 void display(void){
 
-glClear(GL_COLOR_BUFFER_BIT);
+glClear(GL_COLOR_BUFFER_BIT); //LIMPA A TELA A CADA REDESENHO
 
     if (seletor == 1){
 
@@ -37,13 +37,22 @@ glClear(GL_COLOR_BUFFER_BIT);
     }else
     // RETANGULO
     if (seletor == 7){
-            glBegin(GL_QUADS);
-                glVertex2f(-1, -0.5);
-                glVertex2f(-1, 0.5);
-                glVertex2f(1, 0.5);
-                glVertex2f(1, -0.5);
-            glEnd();
+        glBegin(GL_QUADS);
+            glVertex2f(-1, -0.5);
+            glVertex2f(-1, 0.5);
+            glVertex2f(1, 0.5);
+            glVertex2f(1, -0.5);
+        glEnd();
     }else
+    //LOZANGO
+    if (seletor == 8){
+        glBegin(GL_TRIANGLE_STRIP);
+            glVertex2f(0, 0.5);
+            glVertex2f(-1, 0);
+            glVertex2f(1, 0);
+            glVertex2f(0, -0.5);
+        glEnd();
+    }
     // CIRCULO
     if (seletor == 10){
                                                                 //FALTA O CIRCULO
@@ -65,23 +74,24 @@ void menu(int n){
 
 void createMenu(void){
 
-    submenu1 = glutCreateMenu(menu);
-    glutAddMenuEntry("QUADRADO", 5);// OK
-    glutAddMenuEntry("TRIANGULO", 6); // OK
-    glutAddMenuEntry("RETANGULO", 7); // OK
+        submenu1 = glutCreateMenu(menu);
+        glutAddMenuEntry("QUADRADO", 5);// OK
+        glutAddMenuEntry("TRIANGULO", 6); // OK
+        glutAddMenuEntry("RETANGULO", 7); // OK
+        glutAddMenuEntry("LOZANGO", 8); // OK
 
-    submenu2 = glutCreateMenu(menu);
-    glutAddMenuEntry("CIRCULO", 10); // AINDA NAO IMPLEMENTADO
+        submenu2 = glutCreateMenu(menu);
+        glutAddMenuEntry("CIRCULO", 10); // AINDA NAO IMPLEMENTADO
 
-    retornomenu = glutCreateMenu(menu); //POR SER UMA FUNÇÃO VOID, ESSE VALOR IRÁ INFORMAR O QUE FOI SELECIONADO NO MENU
+        retornomenu = glutCreateMenu(menu); //POR SER UMA FUNÇÃO VOID, ESSE VALOR IRÁ INFORMAR O QUE FOI SELECIONADO NO MENU
 
-    glutAddSubMenu("PRIMITIVAS", submenu1); // PRIMITIVAS SIMPLES
-    glutAddSubMenu("PRIMITIVAS COMPOSTAS", submenu2); // PRIMITIVAS COMPOSTAS
-    glutAddMenuEntry("LIMPAR", 1); // LIMPA TELA
-    glutAddMenuEntry("SAIR", 0); // SAI DO MENU
+        glutAddSubMenu("PRIMITIVAS", submenu1); // PRIMITIVAS SIMPLES
+        glutAddSubMenu("PRIMITIVAS COMPOSTAS", submenu2); // PRIMITIVAS COMPOSTAS
+        glutAddMenuEntry("LIMPAR", 1); // LIMPA TELA
+        glutAddMenuEntry("SAIR", 0); // SAI DO MENU
 
-    glutAttachMenu(GLUT_RIGHT_BUTTON); //CHAMA O MENU
-    glutAttachMenu(GLUT_LEFT_BUTTON);
+        glutAttachMenu(GLUT_RIGHT_BUTTON); //INVOCA O MENU COM O BOTÃO DIREITO
+        glutAttachMenu(GLUT_LEFT_BUTTON); // E COM O ESQUERDO
 }
 
 int main(int argc, char **argv){
