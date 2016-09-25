@@ -38,8 +38,9 @@
 	<glu.h>
 	<glut.h>
 
-1474648177 source:c:\users\manowz\documents\github\formas-primitivas\projetobase\main.cpp
+1474837384 source:c:\users\manowz\documents\github\formas-primitivas\projetobase\main.cpp
 	<windows.h>
+	<math.h>
 	<gl.h>
 	<glu.h>
 	<glut.h>
