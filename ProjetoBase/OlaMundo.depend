@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1458077225 source:c:\users\3187829\olamundo\main.cpp
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1472600339 source:c:\users\5218829\desktop\projetobase\projetobase\main.cpp
+	<windows.h>
+	<iostream>
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1473124748 source:c:\users\manoel\desktop\projetobase123\projetobase\main.cpp
+	<windows.h>
+	<iostream>
+	<gl.h>
+	<glu.h>
+	<glut.h>
+
+1474373470 source:c:\users\manowz\documents\projetobase123\projetobase\main.cpp
+	<windows.h>
+	<iostream>
+	<GL/gl.h>
+	<glu.h>
+	<glut.h>
+
+1474577120 source:c:\users\manowz\desktop\m1andre\projetobase\main.cpp
+	<windows.h>
+	<gl.h>
+	<glu.h>
+	<glut.h>
+
+1474597876 source:c:\users\manowz\desktop\formas-primitivas\projetobase\main.cpp
+	<windows.h>
+	<gl.h>
+	<glu.h>
+	<glut.h>
+
+1474648177 source:c:\users\manowz\documents\github\formas-primitivas\projetobase\main.cpp
+	<windows.h>
+	<gl.h>
+	<glu.h>
+	<glut.h>
+
